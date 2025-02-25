@@ -46,7 +46,7 @@ class ConnectionService(private val project: Project) : Disposable {
   open class InitializationException(message: String) : Exception(message)
 
   open class NodeBinaryException(message: String) : InitializationException(
-    message = "$message Please install Node.js version >= 18.0, set the binary path in Tabby plugin settings or add bin path to system environment variable PATH, then restart IDE."
+    message = "$message Please install Node.js version >= 18.0, set the binary path in Bank Copilot plugin settings or add bin path to system environment variable PATH, then restart IDE."
   )
 
   open class NodeBinaryNotFoundException : NodeBinaryException(
@@ -168,7 +168,7 @@ class ConnectionService(private val project: Project) : Disposable {
       logger.info("Node script path: ${script.absolutePath}")
       return script
     } else {
-      throw InitializationException("Node script not found. Please reinstall Tabby plugin.")
+      throw InitializationException("Node script not found. Please reinstall Bank Copilot plugin.")
     }
   }
 

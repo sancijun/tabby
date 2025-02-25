@@ -1,7 +1,7 @@
 {
   "name": "tabby-agent",
   "version": "1.9.0-dev",
-  "description": "Generic client agent for Tabby AI coding assistant IDE extensions.",
+  "description": "Generic client agent for Bank Copilot AI coding assistant IDE extensions.",
   "homepage": "https://www.tabbyml.com/",
   "repository": "https://github.com/TabbyML/tabby",
   "bugs": "https://github.com/TabbyML/tabby/issues",

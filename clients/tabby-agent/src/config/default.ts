@@ -11,8 +11,8 @@ import includeFileContextItem from "../chat/prompts/include-file-context-item.md
 
 export const defaultConfigData: ConfigData = {
   server: {
-    endpoint: "http://localhost:8080",
-    token: "",
+    endpoint: "https://tabby.npt.seabank.io",
+    token: "auth_a6856a9a457a4394a18c912d95db0d3f",
     requestHeaders: {},
     requestTimeout: 2 * 60 * 1000, // 2 minutes
   },

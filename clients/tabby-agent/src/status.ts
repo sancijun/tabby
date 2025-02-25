@@ -249,31 +249,31 @@ export class StatusProvider extends EventEmitter implements Feature {
   private fillToolTip(statusInfo: StatusInfo) {
     switch (statusInfo.status) {
       case "connecting":
-        statusInfo.tooltip = "Tabby: Connecting to Server...";
+        statusInfo.tooltip = "BankCopilot: Connecting to Server...";
         break;
       case "unauthorized":
-        statusInfo.tooltip = "Tabby: Authorization Required";
+        statusInfo.tooltip = "BankCopilot: Authorization Required";
         break;
       case "disconnected":
-        statusInfo.tooltip = "Tabby: Connect to Server Failed";
+        statusInfo.tooltip = "BankCopilot: Connect to Server Failed";
         break;
       case "ready":
-        statusInfo.tooltip = "Tabby: Code Completion Enabled";
+        statusInfo.tooltip = "BankCopilot: Code Completion Enabled";
         break;
       case "readyForAutoTrigger":
-        statusInfo.tooltip = "Tabby: Automatic Code Completion Enabled";
+        statusInfo.tooltip = "BankCopilot: Automatic Code Completion Enabled";
         break;
       case "readyForManualTrigger":
-        statusInfo.tooltip = "Tabby: Manual Code Completion Enabled";
+        statusInfo.tooltip = "BankCopilot: Manual Code Completion Enabled";
         break;
       case "fetching":
-        statusInfo.tooltip = "Tabby: Generating Completions...";
+        statusInfo.tooltip = "BankCopilot: Generating Completions...";
         break;
       case "completionResponseSlow":
-        statusInfo.tooltip = "Tabby: Slow Completion Response Detected";
+        statusInfo.tooltip = "BankCopilot: Slow Completion Response Detected";
         break;
       case "rateLimitExceeded":
-        statusInfo.tooltip = "Tabby: Too Many Requests";
+        statusInfo.tooltip = "BankCopilot: Too Many Requests";
         break;
       default:
         break;

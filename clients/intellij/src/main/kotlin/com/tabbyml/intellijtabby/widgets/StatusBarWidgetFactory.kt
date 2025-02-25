@@ -25,15 +25,15 @@ class StatusBarWidgetFactory : StatusBarEditorBasedWidgetFactory() {
   }
 
   override fun getDisplayName(): String {
-    return "Tabby"
+    return "Bank Copilot"
   }
 
   override fun createWidget(project: Project): StatusBarWidget {
     return object : EditorBasedStatusBarPopup(project, false) {
       private val messageBusConnection = project.messageBus.connect()
-      val text = "Tabby"
+      val text = "Bank Copilot"
       var icon: Icon = AnimatedIcon.Default()
-      var tooltip = "Tabby: Initializing"
+      var tooltip = "Bank Copilot: Initializing"
 
       init {
         project.serviceOrNull<CombinedState>()?.state?.let { updateRendering(it) }
@@ -78,19 +78,19 @@ class StatusBarWidgetFactory : StatusBarEditorBasedWidgetFactory() {
         when (combinedState.connectionState) {
           ConnectionService.State.INITIALIZING -> {
             icon = AnimatedIcon.Default()
-            tooltip = "Tabby: Initializing"
+            tooltip = "BankCopilot: Initializing"
           }
 
           ConnectionService.State.INITIALIZATION_FAILED -> {
             icon = AllIcons.General.Error
-            tooltip = "Tabby: Initialization failed"
+            tooltip = "BankCopilot: Initialization failed"
           }
 
           ConnectionService.State.READY -> {
             val statusInfo = combinedState.agentStatus
             if (statusInfo == null) {
               icon = AnimatedIcon.Default()
-              tooltip = "Tabby: Updating status"
+              tooltip = "BankCopilot: Updating status"
             } else {
               icon = when (statusInfo.status) {
                 StatusInfo.Status.CONNECTING, StatusInfo.Status.FETCHING -> {
@@ -117,7 +117,7 @@ class StatusBarWidgetFactory : StatusBarEditorBasedWidgetFactory() {
                   AnimatedIcon.Default()
                 }
               }
-              tooltip = statusInfo.tooltip ?: "Tabby: ${statusInfo.status}"
+              tooltip = statusInfo.tooltip ?: "Bank Copilot: ${statusInfo.status}"
             }
           }
         }

@@ -21,7 +21,7 @@ fun notifyInitializationFailed(exception: ConnectionService.InitializationExcept
 
   val notification = Notification(
     "com.tabbyml.intellijtabby.notifications.warning",
-    "Tabby initialization failed",
+    "Bank Copilot initialization failed",
     "${exception.message}",
     NotificationType.ERROR,
   )
@@ -43,7 +43,7 @@ fun notifyAuthRequired() {
   authRequiredNotification?.expire()
   val notification = Notification(
     "com.tabbyml.intellijtabby.notifications.warning",
-    "Tabby server requires authentication, please set your personal token.",
+    "Bank Copilot server requires authentication, please set your personal token.",
     NotificationType.WARNING,
   )
   notification.addAction(object : AnAction("Open Settings...") {

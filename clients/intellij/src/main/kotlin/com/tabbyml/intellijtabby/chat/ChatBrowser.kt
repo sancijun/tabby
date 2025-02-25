@@ -392,7 +392,7 @@ class ChatBrowser(private val project: Project) : JBCefBrowser(
       when (statusInfo.status) {
         StatusInfo.Status.CONNECTING -> {
           currentConfig = null
-          showContent("Connecting to Tabby server...")
+          showContent("Connecting to Bank Copilot server...")
         }
 
         StatusInfo.Status.UNAUTHORIZED -> {
@@ -402,7 +402,7 @@ class ChatBrowser(private val project: Project) : JBCefBrowser(
 
         StatusInfo.Status.DISCONNECTED -> {
           currentConfig = null
-          showContent("Cannot connect to Tabby server, please check your settings.")
+          showContent("Cannot connect to Bank Copilot server, please check your settings.")
         }
 
         else -> {
@@ -719,14 +719,14 @@ class ChatBrowser(private val project: Project) : JBCefBrowser(
       val version = parseVersion(versionString)
       val range = Constraint.parse(TABBY_CHAT_PANEL_API_VERSION_RANGE)
       if (version != null && !range.satisfiedBy(version)) {
-        return "Please update your Tabby server and Tabby plugin for IntelliJ Platform to the latest version to use chat panel."
+        return "Please update your Bank Copilot server and Bank Copilot plugin for IntelliJ Platform to the latest version to use chat panel."
       }
       return null
     }
 
     private fun checkServerHealth(serverHealth: Map<String, Any>?): String? {
       if (serverHealth == null) {
-        return "Connecting to Tabby server..."
+        return "Connecting to Bank Copilot server..."
       }
       if (serverHealth["webserver"] == null || serverHealth["chat_model"] == null) {
         return "You need to launch the server with the chat model enabled; for example, use `--chat-model Qwen2-1.5B-Instruct`."
@@ -748,7 +748,7 @@ class ChatBrowser(private val project: Project) : JBCefBrowser(
         }
         if (version != null && !Constraint.parse(TABBY_SERVER_VERSION_RANGE).satisfiedBy(version)) {
           return String.format(
-            "Tabby Chat requires Tabby server version %s. Your server is running version %s.",
+            "Bank Copilot Chat requires Bank Copilot server version %s. Your server is running version %s.",
             TABBY_SERVER_VERSION_RANGE, version.toString()
           )
         }
@@ -839,10 +839,10 @@ class ChatBrowser(private val project: Project) : JBCefBrowser(
           ?.resolve("tabby-threads/iife/create-thread-from-iframe.js")
           ?.toFile()
       if (script?.exists() == true) {
-        logger<ChatBrowser>().info("Tabby-threads script path: ${script.absolutePath}")
+        logger<ChatBrowser>().info("Bank Copilot-threads script path: ${script.absolutePath}")
         return script.readText()
       } else {
-        throw InitializationException("Tabby-threads script not found. Please reinstall Tabby plugin.")
+        throw InitializationException("Bank Copilot-threads script not found. Please reinstall Bank Copilot plugin.")
       }
     }
 
@@ -901,7 +901,7 @@ class ChatBrowser(private val project: Project) : JBCefBrowser(
       <body>
         <div id="message">
           <div>
-            <h4>Welcome to Tabby Chat</h4>
+            <h4>Welcome to Bank Copilot Chat</h4>
             <p id="messageContent"></p>
             <a href="javascript:reload();">Reload</a>
           </div>
