@@ -6,6 +6,6 @@ import com.intellij.openapi.actionSystem.AnActionEvent
 
 class OpenOnlineDocumentation : AnAction() {
   override fun actionPerformed(e: AnActionEvent) {
-    BrowserUtil.browse("https://tabby.tabbyml.com/docs")
+    BrowserUtil.browse("https://confluence.shopee.io/pages/viewpage.action?pageId=2652461550")
   }
 }

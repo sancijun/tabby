@@ -28,7 +28,7 @@ fun notifyInitializationFailed(exception: ConnectionService.InitializationExcept
   notification.addAction(object : AnAction("Open Online Documentation") {
     override fun actionPerformed(e: AnActionEvent) {
       notification.expire()
-      BrowserUtil.browse("https://tabby.tabbyml.com/docs/extensions/troubleshooting/#tabby-initialization-failed")
+      BrowserUtil.browse("https://confluence.shopee.io/pages/viewpage.action?pageId=2652461550")
     }
   })
   initializationFailedNotification = notification
@@ -55,7 +55,7 @@ fun notifyAuthRequired() {
   notification.addAction(object : AnAction("Open Online Help") {
     override fun actionPerformed(e: AnActionEvent) {
       notification.expire()
-      BrowserUtil.browse("https://tabby.tabbyml.com/docs/quick-start/register-account/")
+      BrowserUtil.browse("https://confluence.shopee.io/pages/viewpage.action?pageId=2652461550")
     }
   })
   authRequiredNotification = notification

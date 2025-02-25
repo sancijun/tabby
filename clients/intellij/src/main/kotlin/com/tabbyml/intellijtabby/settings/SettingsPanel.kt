@@ -173,7 +173,7 @@ class SettingsPanel(private val project: Project) {
       <html>
       Bank Copilot collects aggregated anonymous usage data and sends it to the Bank Copilot team to help improve our products.<br/>
       Your code, generated completions, or any identifying information is never tracked or transmitted.<br/>
-      For more details on data collection, please check our <a href="https://tabby.tabbyml.com/docs/extensions/configurations#usage-collection">online documentation</a>.<br/>
+      For more details on data collection, please check our <a href="https://confluence.shopee.io/pages/viewpage.action?pageId=2652461550">online documentation</a>.<br/>
       </html>
       """
     ).panel
