@@ -162,7 +162,7 @@ class ConnectionService(private val project: Project) : Disposable {
 
   private fun getNodeScript(): File {
     val script =
-      PluginManagerCore.getPlugin(PluginId.getId("com.tabbyml.intellij-tabby"))?.pluginPath?.resolve("tabby-agent/node/index.js")
+      PluginManagerCore.getPlugin(PluginId.getId("com.shopee.bank-copilot-intellij"))?.pluginPath?.resolve("tabby-agent/node/index.js")
         ?.toFile()
     if (script?.exists() == true) {
       logger.info("Node script path: ${script.absolutePath}")

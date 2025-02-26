@@ -1,7 +1,7 @@
 <!-- 插件配置文件，完整文档：https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <!-- 插件唯一标识符（需保持全周期不变） -->
-    <id>com.tabbyml.intellij-tabby</id>
+    <id>com.shopee.bank-copilot-intellij</id>
 
     <!-- 插件显示名称（需符合市场命名规范） -->
     <name>Bank Copilot</name>
@@ -11,7 +11,7 @@
 
     <!-- 插件描述（支持简单HTML） -->
     <description><![CDATA[
-        <h1>Bank Copilot IntelliJ 插件</h1>
+        <h1>Bank Copilot</h1>
         <p>Bank Copilot 是一款AI编码助手，能够实时提供多行代码补全和完整函数建议。
         <a href="https://confluence.shopee.io/pages/viewpage.action?pageId=2652461550" >使用文档</a>
         </p>

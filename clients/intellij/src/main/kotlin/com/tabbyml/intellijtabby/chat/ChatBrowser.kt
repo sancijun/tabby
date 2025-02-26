@@ -834,7 +834,7 @@ class ChatBrowser(private val project: Project) : JBCefBrowser(
 
     private fun loadTabbyThreadsScript(): String {
       val script =
-        PluginManagerCore.getPlugin(PluginId.getId("com.tabbyml.intellij-tabby"))
+        PluginManagerCore.getPlugin(PluginId.getId("com.shopee.bank-copilot-intellij"))
           ?.pluginPath
           ?.resolve("tabby-threads/iife/create-thread-from-iframe.js")
           ?.toFile()
